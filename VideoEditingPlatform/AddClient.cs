@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,8 +38,7 @@ namespace VideoEditingPlatform
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text == "Save")
-            {
+
                 if (add_name_client.Text == "" && add_address_client.Text == "" && add_Tel_client.Text == "")
                 {
                     MessageBox.Show("Some fields are empty please fill them", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,13 +46,10 @@ namespace VideoEditingPlatform
                 }
                 else
                 {
-                    Client clt = new Client(add_name_client.Text, add_address_client.Text, add_Tel_client.Text);
+                Debug.WriteLine(add_name_client.Text+ add_address_client.Text+ add_Tel_client.Text);
+                    Client clt = new Client(add_name_client.Text, add_address_client.Text, Int32.Parse(add_Tel_client.Text));
                     DBClient.AddClient(clt);
                     clear();
-
-                }
-
-
             }
             _parent.Display();
             
@@ -61,6 +58,7 @@ namespace VideoEditingPlatform
         public void clear()
         {
             add_name_client.Text = add_address_client.Text = add_Tel_client.Text = "";
+
         }
 
 

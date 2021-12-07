@@ -96,7 +96,7 @@ namespace VideoEditingPlatform
             this.add_Tel_client.BackColor = System.Drawing.Color.White;
             this.add_Tel_client.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.add_Tel_client.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.add_Tel_client.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.add_Tel_client.ForeColor = System.Drawing.Color.Black;
             this.add_Tel_client.Location = new System.Drawing.Point(261, 390);
             this.add_Tel_client.MaximumSize = new System.Drawing.Size(200, 200);
             this.add_Tel_client.Multiline = true;
@@ -109,7 +109,7 @@ namespace VideoEditingPlatform
             this.add_address_client.BackColor = System.Drawing.Color.White;
             this.add_address_client.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.add_address_client.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.add_address_client.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.add_address_client.ForeColor = System.Drawing.Color.Black;
             this.add_address_client.Location = new System.Drawing.Point(261, 275);
             this.add_address_client.MaximumSize = new System.Drawing.Size(200, 200);
             this.add_address_client.Multiline = true;
@@ -122,7 +122,7 @@ namespace VideoEditingPlatform
             this.add_name_client.BackColor = System.Drawing.Color.White;
             this.add_name_client.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.add_name_client.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.add_name_client.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.add_name_client.ForeColor = System.Drawing.Color.Black;
             this.add_name_client.Location = new System.Drawing.Point(261, 193);
             this.add_name_client.MaximumSize = new System.Drawing.Size(200, 200);
             this.add_name_client.Multiline = true;

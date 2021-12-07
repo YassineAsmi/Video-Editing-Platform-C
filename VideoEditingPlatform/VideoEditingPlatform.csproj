@@ -220,7 +220,6 @@
     <Compile Include="Clients.Designer.cs">
       <DependentUpon>Clients.cs</DependentUpon>
     </Compile>
-    <Compile Include="MySqllException.cs" />
     <Compile Include="Videos.cs">
       <SubType>Form</SubType>
     </Compile>
