@@ -79,6 +79,17 @@ namespace VideoEditingPlatform
             }
         }
 
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomeA homea = new HomeA();
+            this.Hide();
+            homea.Show();
+        }
     }
 
 

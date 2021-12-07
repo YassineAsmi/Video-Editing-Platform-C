@@ -77,6 +77,7 @@ namespace VideoEditingPlatform
             this.button1.TabIndex = 10;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Loginbtn
             // 
@@ -87,7 +88,7 @@ namespace VideoEditingPlatform
             this.Loginbtn.Name = "Loginbtn";
             this.Loginbtn.Size = new System.Drawing.Size(202, 43);
             this.Loginbtn.TabIndex = 9;
-            this.Loginbtn.Text = "Login";
+            this.Loginbtn.Text = "Create";
             this.Loginbtn.UseVisualStyleBackColor = false;
             this.Loginbtn.Click += new System.EventHandler(this.Loginbtn_Click);
             // 
@@ -128,7 +129,8 @@ namespace VideoEditingPlatform
             this.Controls.Add(this.Loginbtn);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Register";
-            this.Text = "Form1";
+            this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

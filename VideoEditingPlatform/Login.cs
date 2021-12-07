@@ -56,7 +56,7 @@ namespace VideoEditingPlatform
             {
                
                 con.Open();
-                string stm = "select username,password from users WHERE username =@Name AND password =@Password";
+                string stm = "select username,password,privieliges from users WHERE username =@Name AND password =@Password and privieliges=1 or privieliges=0 ";
                 var cmd = new MySqlCommand(stm, con);
 
                 cmd.Parameters.AddWithValue("@Name", userLogin.Text);
@@ -64,7 +64,23 @@ namespace VideoEditingPlatform
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    pageRedirect();
+                    Boolean priv = reader.GetBoolean("privieliges");
+                    if (priv == false)
+                    {
+                        HomeT homeT = new HomeT();
+                        this.Hide();
+                        homeT.Show();
+                        
+                    }
+                    else
+                    {
+                        HomeA homea = new HomeA();
+                        this.Hide();
+                        homea.Show();
+                        
+                        Console.WriteLine("chihez lel tech");
+                    }
+
                 }
                else
                 {
@@ -73,22 +89,11 @@ namespace VideoEditingPlatform
             }
             catch (Exception ex)
             {
-                Console.WriteLine("login failed");
+                Console.WriteLine(ex);
             }
             con.Close();
         }
-        public void pageRedirect()
-        {
-            HomeT homeT = new HomeT();
-            if (homeT == null)
-            {
-                homeT.Parent = this;
-            }
-            else
-            {
-                homeT.Show();
-                this.Hide();
-            }
-        }
+
+        
     }
 }

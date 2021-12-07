@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,10 @@ namespace VideoEditingPlatform
         public Clients()
         {
             InitializeComponent();
+ 
         }
+
+
 
         private void Clients_Load(object sender, EventArgs e)
         {
@@ -51,5 +55,42 @@ namespace VideoEditingPlatform
         {
             this.Hide();
         }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+
+
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Add_Client form = new Add_Client(this);
+            form.ShowDialog();
+        }
+        public void Display()
+        {
+            DBClient.DisplayAndSearch("Select idClient,NomPrenom,address,tel from clients;", dataGridViewClients);
+        }
+        private void Clients_Shown(object sender, EventArgs e)
+        {
+            Display();
+        
+        }
+
+        
+        
     }
 }
