@@ -31,14 +31,14 @@ namespace VideoEditingPlatform
         {
             this.gradientColor1 = new VideoEditingPlatform.GradientColor();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.add_Tel_client = new System.Windows.Forms.TextBox();
             this.add_address_client = new System.Windows.Forms.TextBox();
             this.add_name_client = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbltxt = new System.Windows.Forms.Label();
             this.gradientColor1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,14 +47,14 @@ namespace VideoEditingPlatform
             this.gradientColor1.Angle = 0F;
             this.gradientColor1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
             this.gradientColor1.Controls.Add(this.button2);
-            this.gradientColor1.Controls.Add(this.button1);
+            this.gradientColor1.Controls.Add(this.btnSave);
             this.gradientColor1.Controls.Add(this.add_Tel_client);
             this.gradientColor1.Controls.Add(this.add_address_client);
             this.gradientColor1.Controls.Add(this.add_name_client);
             this.gradientColor1.Controls.Add(this.label4);
             this.gradientColor1.Controls.Add(this.label3);
             this.gradientColor1.Controls.Add(this.label2);
-            this.gradientColor1.Controls.Add(this.label1);
+            this.gradientColor1.Controls.Add(this.lbltxt);
             this.gradientColor1.LeftColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.gradientColor1.Location = new System.Drawing.Point(-1, 1);
             this.gradientColor1.Name = "gradientColor1";
@@ -77,19 +77,19 @@ namespace VideoEditingPlatform
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(102, 480);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 58);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.BackColor = System.Drawing.Color.Lime;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(102, 480);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(168, 58);
+            this.btnSave.TabIndex = 32;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // add_Tel_client
             // 
@@ -169,19 +169,19 @@ namespace VideoEditingPlatform
             this.label2.TabIndex = 14;
             this.label2.Text = "Name :";
             // 
-            // label1
+            // lbltxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(173, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 65);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Add Clients";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbltxt.AutoSize = true;
+            this.lbltxt.BackColor = System.Drawing.Color.Transparent;
+            this.lbltxt.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltxt.ForeColor = System.Drawing.Color.White;
+            this.lbltxt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbltxt.Location = new System.Drawing.Point(173, 23);
+            this.lbltxt.Name = "lbltxt";
+            this.lbltxt.Size = new System.Drawing.Size(288, 65);
+            this.lbltxt.TabIndex = 13;
+            this.lbltxt.Text = "Add Clients";
+            this.lbltxt.Click += new System.EventHandler(this.label1_Click);
             // 
             // Add_Client
             // 
@@ -202,7 +202,7 @@ namespace VideoEditingPlatform
         #endregion
 
         private GradientColor gradientColor1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbltxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -210,6 +210,6 @@ namespace VideoEditingPlatform
         private System.Windows.Forms.TextBox add_address_client;
         private System.Windows.Forms.TextBox add_name_client;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
     }
 }

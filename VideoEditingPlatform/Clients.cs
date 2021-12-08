@@ -13,9 +13,12 @@ namespace VideoEditingPlatform
 {
     public partial class Clients : Form
     {
+
+        Add_Client addClient;
         public Clients()
         {
             InitializeComponent();
+            addClient = new Add_Client(this);
             
         }
 
@@ -77,8 +80,9 @@ namespace VideoEditingPlatform
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Add_Client form = new Add_Client(this);
-            form.ShowDialog();
+            addClient.clear();
+            addClient.SaveInfo();
+            addClient.ShowDialog();
         }
         public void Display()
         {
@@ -98,6 +102,38 @@ namespace VideoEditingPlatform
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void v_TextChanged(object sender, EventArgs e)
+        {
+            DBClient.DisplayAndSearch("Select idClient,NomPrenom,address,tel from clients WHERE NomPrenom LIKE '%"+search.Text +"%'", dataGridViewClients);
+        }
+
+        private void dataGridViewClients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                //Edit button message box
+                addClient.clear();
+                addClient.idClient = dataGridViewClients.Rows[e.RowIndex].Cells[2].Value.ToString();
+                addClient.name = dataGridViewClients.Rows[e.RowIndex].Cells[3].Value.ToString();
+                addClient.address = dataGridViewClients.Rows[e.RowIndex].Cells[4].Value.ToString();
+                addClient.tel = dataGridViewClients.Rows[e.RowIndex].Cells[5].Value.ToString();
+                addClient.UpdateInfo();
+                addClient.ShowDialog();
+                return;
+            }
+            if(e.ColumnIndex == 1)
+            {
+                //Delete button message box
+                if(MessageBox.Show("Are you sure you want to delete this client?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    DBClient.DeleteClient(dataGridViewClients.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    Display();
+                }
+                
+                return;
+            }
         }
     }
 }

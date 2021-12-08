@@ -42,7 +42,7 @@ namespace VideoEditingPlatform
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.v = new System.Windows.Forms.TextBox();
+            this.search = new System.Windows.Forms.TextBox();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -120,13 +120,14 @@ namespace VideoEditingPlatform
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // v
+            // search
             // 
-            this.v.BackColor = System.Drawing.Color.White;
-            this.v.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.v, "v");
-            this.v.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.v.Name = "v";
+            this.search.BackColor = System.Drawing.Color.White;
+            this.search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.search, "search");
+            this.search.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.search.Name = "search";
+            this.search.TextChanged += new System.EventHandler(this.v_TextChanged);
             // 
             // dataGridViewClients
             // 
@@ -154,7 +155,7 @@ namespace VideoEditingPlatform
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridViewClients.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dataGridViewClients.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,6 +178,7 @@ namespace VideoEditingPlatform
             this.dataGridViewClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewClients.RowHeadersVisible = false;
             this.dataGridViewClients.ShowEditingIcon = false;
+            this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
             this.dataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button7
@@ -250,6 +252,7 @@ namespace VideoEditingPlatform
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "Edit";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,10 +262,12 @@ namespace VideoEditingPlatform
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Text = "Edit";
+            this.Column5.UseColumnTextForButtonValue = true;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "Delete";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,6 +277,7 @@ namespace VideoEditingPlatform
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Text = "Delete";
+            this.Column6.UseColumnTextForButtonValue = true;
             // 
             // Clients
             // 
@@ -282,7 +288,7 @@ namespace VideoEditingPlatform
             this.Controls.Add(this.button7);
             this.Controls.Add(this.gradientColor1);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.v);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -314,7 +320,7 @@ namespace VideoEditingPlatform
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox v;
+        private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.DataGridView dataGridViewClients;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

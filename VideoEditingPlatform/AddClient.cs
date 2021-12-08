@@ -15,27 +15,33 @@ namespace VideoEditingPlatform
     public partial class Add_Client : Form
     {
         private readonly Clients _parent;
+        public String idClient, name, address, tel;
         public Add_Client(Clients parent)
         {
             InitializeComponent();
             _parent = parent;
         }
+        public void UpdateInfo()
+        {
+            lbltxt.Text = "Edit Client";
+            btnSave.Text = "Edit";
+            add_name_client.Text = name;
+            add_address_client.Text = address;
+            add_Tel_client.Text = tel;
 
+        }
+        public void SaveInfo()
+        {
+            lbltxt.Text = "Add Client";
+            btnSave.Text = "Save";
+            
+
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void add_Client()
-        {
-            string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
-            var con = new MySqlConnection(cs);
-
-
-
-            
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -46,10 +52,22 @@ namespace VideoEditingPlatform
                 }
                 else
                 {
-                Debug.WriteLine(add_name_client.Text+ add_address_client.Text+ add_Tel_client.Text);
+                if(btnSave.Text == "Save")
+                {
+                    Debug.WriteLine(add_name_client.Text + add_address_client.Text + add_Tel_client.Text);
                     Client clt = new Client(add_name_client.Text, add_address_client.Text, Int32.Parse(add_Tel_client.Text));
                     DBClient.AddClient(clt);
                     clear();
+
+                }
+                if(btnSave.Text == "Edit")
+                {
+                    Client clt = new Client(add_name_client.Text, add_address_client.Text, Int32.Parse(add_Tel_client.Text));
+                    Debug.WriteLine("id client : "+idClient);
+                    DBClient.UpdateClient(clt, idClient);
+                    clear();
+                }
+                
             }
             _parent.Display();
             

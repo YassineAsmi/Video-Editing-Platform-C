@@ -324,34 +324,34 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="v.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="search.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
-  <data name="v.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="search.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 168</value>
   </data>
-  <data name="v.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="search.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>200, 200</value>
   </data>
-  <data name="v.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="search.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 23</value>
   </data>
-  <data name="v.TabIndex" type="System.Int32, mscorlib">
+  <data name="search.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="v.Text" xml:space="preserve">
+  <data name="search.Text" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="&gt;&gt;v.Name" xml:space="preserve">
-    <value>v</value>
+  <data name="&gt;&gt;search.Name" xml:space="preserve">
+    <value>search</value>
   </data>
-  <data name="&gt;&gt;v.Type" xml:space="preserve">
+  <data name="&gt;&gt;search.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;v.Parent" xml:space="preserve">
+  <data name="&gt;&gt;search.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;v.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;search.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="dataGridViewClients.ColumnHeadersHeight" type="System.Int32, mscorlib">

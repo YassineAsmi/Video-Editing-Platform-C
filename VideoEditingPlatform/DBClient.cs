@@ -40,11 +40,12 @@ namespace VideoEditingPlatform
             string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
             var con2 = new MySqlConnection(cs);
                 con2.Open();
-                string register = "UPDATE Clients SET NomPrenom=@NomPrenom address=@address tel=@tel where idClient=@idClient;";
+                string register = "UPDATE Clients SET NomPrenom=@NomPrenom, address=@address, tel=@tel where idClient=@idClient;";
                 var cmd2 = new MySqlCommand(register, con2);
-                cmd2.Parameters.AddWithValue("@NomPrenom", clt.Nomprenom);
-                cmd2.Parameters.AddWithValue("@address", clt.Address);
-                cmd2.Parameters.AddWithValue("@tel", clt.Tel);
+                cmd2.Parameters.Add("@idClient", MySqlDbType.VarChar).Value = id;
+                cmd2.Parameters.Add("@NomPrenom", MySqlDbType.VarChar).Value = clt.Nomprenom;
+                cmd2.Parameters.Add("@address", MySqlDbType.VarChar).Value = clt.Address;
+                cmd2.Parameters.Add("@tel", MySqlDbType.Int64).Value = clt.Tel;
             try
             {
                 cmd2.ExecuteNonQuery();
@@ -58,16 +59,15 @@ namespace VideoEditingPlatform
 
             }
 
-        public static void DeleteClient(Client clt, String id)
+        public static void DeleteClient(String id)
         {
             string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
             var con2 = new MySqlConnection(cs);
             con2.Open();
             string register = "DELETE FROM Clients where idClient=@idClient;";
             var cmd2 = new MySqlCommand(register, con2);
-            cmd2.Parameters.AddWithValue("@NomPrenom", clt.Nomprenom);
-            cmd2.Parameters.AddWithValue("@address", clt.Address);
-            cmd2.Parameters.AddWithValue("@tel", clt.Tel);
+            cmd2.Parameters.Add("@idClient", MySqlDbType.VarChar).Value = id;
+
             try
             {
                 cmd2.ExecuteNonQuery();
