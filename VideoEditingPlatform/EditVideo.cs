@@ -22,13 +22,13 @@ namespace VideoEditingPlatform
             string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
             var con2 = new MySqlConnection(cs);
             con2.Open();
-            string register = "UPDATE Videos SET nomVideo=@nomVideo, dateTravail=@dateTravail, Musique=@Musique, Status =@Status  where idVideo=@idVideo;";
+            string register = "UPDATE videos SET nomVideo=@nomVideo, dateTravail=@dateTravail, Musique=@Musique, Status =@Status  where idVideo=@idVideo;";
             var cmd2 = new MySqlCommand(register, con2);
-            cmd2.Parameters.Add("@idVideo", MySqlDbType.VarChar).Value = idVideo;
-            cmd2.Parameters.Add("@nomVideo", MySqlDbType.VarChar).Value = nomVideo;
+            cmd2.Parameters.Add("@nomVideo", MySqlDbType.VarChar).Value = VideoNameEdit.Text;
             cmd2.Parameters.Add("@dateTravail", MySqlDbType.VarChar).Value = dateTravail;
-            cmd2.Parameters.Add("@Musique", MySqlDbType.VarChar).Value = Musique;
-            cmd2.Parameters.Add("@Status", MySqlDbType.VarChar).Value = Status;
+            cmd2.Parameters.Add("@Musique", MySqlDbType.VarChar).Value = SongEdit.Text;
+            cmd2.Parameters.Add("@Status", MySqlDbType.Binary).Value = intConv();
+            cmd2.Parameters.Add("@idVideo", MySqlDbType.Int32).Value = idVideo;
             try
             {
                 cmd2.ExecuteNonQuery();
@@ -36,10 +36,11 @@ namespace VideoEditingPlatform
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Video not updated", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Video not updated"+ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             con2.Close();
+            this.Close();
             clear();
         }
 
@@ -50,6 +51,23 @@ namespace VideoEditingPlatform
             SongEdit.Text = Musique;
             StatusEdit.Checked = Status;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public int intConv()
+        {
+            if (StatusEdit.Checked)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
         public EditVideo(Videos parent)
         {

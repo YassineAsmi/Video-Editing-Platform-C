@@ -121,13 +121,16 @@
   <data name="add_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\add_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\search_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shutdown_128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\shutdown_128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\corner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\refresh_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

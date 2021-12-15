@@ -119,5 +119,10 @@ namespace VideoEditingPlatform
             this.Hide();
             homeT.Show();
         }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            DisplayVideo();
+        }
     }
 }

@@ -29,21 +29,18 @@ namespace VideoEditingPlatform
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SearchVideo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.onClickNotif = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.OnClickAdd = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.dataGridViewVideos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +52,10 @@ namespace VideoEditingPlatform
             this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.gradientColor1 = new VideoEditingPlatform.GradientColor();
+            this.Refresh = new System.Windows.Forms.Button();
+            this.OnClickAdd = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewVideos)).BeginInit();
             this.gradientColor1.SuspendLayout();
@@ -142,21 +143,6 @@ namespace VideoEditingPlatform
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
-            this.button5.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.shutdown_128px;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(74, 532);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(66, 59);
-            this.button5.TabIndex = 5;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
@@ -171,31 +157,6 @@ namespace VideoEditingPlatform
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // OnClickAdd
-            // 
-            this.OnClickAdd.BackColor = System.Drawing.Color.Gainsboro;
-            this.OnClickAdd.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.add_48px;
-            this.OnClickAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OnClickAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OnClickAdd.Location = new System.Drawing.Point(1520, 107);
-            this.OnClickAdd.Name = "OnClickAdd";
-            this.OnClickAdd.Size = new System.Drawing.Size(56, 52);
-            this.OnClickAdd.TabIndex = 27;
-            this.OnClickAdd.UseVisualStyleBackColor = false;
-            this.OnClickAdd.Click += new System.EventHandler(this.OnClickAdd_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Gainsboro;
-            this.button6.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.search_64px;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(413, 107);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 52);
-            this.button6.TabIndex = 21;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
             // dataGridViewVideos
             // 
             this.dataGridViewVideos.AllowUserToAddRows = false;
@@ -206,14 +167,14 @@ namespace VideoEditingPlatform
             this.dataGridViewVideos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewVideos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewVideos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewVideos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVideos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewVideos.ColumnHeadersHeight = 50;
             this.dataGridViewVideos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -225,27 +186,27 @@ namespace VideoEditingPlatform
             this.Column7,
             this.Column8});
             this.dataGridViewVideos.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewVideos.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVideos.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewVideos.EnableHeadersVisualStyles = false;
             this.dataGridViewVideos.Location = new System.Drawing.Point(257, 188);
             this.dataGridViewVideos.Name = "dataGridViewVideos";
             this.dataGridViewVideos.ReadOnly = true;
             this.dataGridViewVideos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewVideos.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewVideos.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewVideos.RowHeadersVisible = false;
             this.dataGridViewVideos.ShowEditingIcon = false;
             this.dataGridViewVideos.Size = new System.Drawing.Size(1319, 359);
@@ -305,11 +266,11 @@ namespace VideoEditingPlatform
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column7.DataPropertyName = "Edit";
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column7.HeaderText = "";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
@@ -320,11 +281,11 @@ namespace VideoEditingPlatform
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column8.DataPropertyName = "Delete";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column8.HeaderText = "";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
@@ -358,11 +319,65 @@ namespace VideoEditingPlatform
             this.gradientColor1.TabIndex = 33;
             this.gradientColor1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
             // 
+            // Refresh
+            // 
+            this.Refresh.BackColor = System.Drawing.Color.Gainsboro;
+            this.Refresh.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.refresh_60px;
+            this.Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Refresh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Refresh.Location = new System.Drawing.Point(1520, 108);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(56, 52);
+            this.Refresh.TabIndex = 34;
+            this.Refresh.UseVisualStyleBackColor = false;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
+            // OnClickAdd
+            // 
+            this.OnClickAdd.BackColor = System.Drawing.Color.Gainsboro;
+            this.OnClickAdd.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.add_48px;
+            this.OnClickAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OnClickAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.OnClickAdd.Location = new System.Drawing.Point(484, 108);
+            this.OnClickAdd.Name = "OnClickAdd";
+            this.OnClickAdd.Size = new System.Drawing.Size(56, 52);
+            this.OnClickAdd.TabIndex = 27;
+            this.OnClickAdd.UseVisualStyleBackColor = false;
+            this.OnClickAdd.Click += new System.EventHandler(this.OnClickAdd_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gainsboro;
+            this.button6.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.search_64px;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button6.Location = new System.Drawing.Point(413, 107);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(56, 52);
+            this.button6.TabIndex = 21;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
+            this.button5.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.shutdown_128px;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button5.Location = new System.Drawing.Point(74, 532);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(66, 59);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Videos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1768, 633);
+            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.gradientColor1);
             this.Controls.Add(this.dataGridViewVideos);
             this.Controls.Add(this.OnClickAdd);
@@ -405,5 +420,6 @@ namespace VideoEditingPlatform
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
         private System.Windows.Forms.Label label1;
         private GradientColor gradientColor1;
+        private System.Windows.Forms.Button Refresh;
     }
 }

@@ -54,6 +54,7 @@ namespace VideoEditingPlatform
             this.button6 = new System.Windows.Forms.Button();
             this.gradientColor1 = new VideoEditingPlatform.GradientColor();
             this.label1 = new System.Windows.Forms.Label();
+            this.refreshClient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             this.gradientColor1.SuspendLayout();
@@ -281,11 +282,21 @@ namespace VideoEditingPlatform
             this.label1.Name = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // refreshClient
+            // 
+            this.refreshClient.BackColor = System.Drawing.Color.Gainsboro;
+            this.refreshClient.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.refresh_60px;
+            resources.ApplyResources(this.refreshClient, "refreshClient");
+            this.refreshClient.Name = "refreshClient";
+            this.refreshClient.UseVisualStyleBackColor = false;
+            this.refreshClient.Click += new System.EventHandler(this.refreshClient_Click);
+            // 
             // Clients
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.refreshClient);
             this.Controls.Add(this.dataGridViewClients);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.gradientColor1);
@@ -330,5 +341,6 @@ namespace VideoEditingPlatform
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Button refreshClient;
     }
 }

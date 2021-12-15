@@ -90,10 +90,7 @@ namespace VideoEditingPlatform
         }
         private void Clients_Shown(object sender, EventArgs e)
         {
-
             Display();
-            
-        
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -157,6 +154,11 @@ namespace VideoEditingPlatform
             Users.idUser = 0;
             Users.username = "";
             Users.delay = 0;
+        }
+
+        private void refreshClient_Click(object sender, EventArgs e)
+        {
+            Display();
         }
     }
 }
