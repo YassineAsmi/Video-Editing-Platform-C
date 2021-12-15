@@ -31,6 +31,7 @@ namespace VideoEditingPlatform
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace VideoEditingPlatform
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,19 @@ namespace VideoEditingPlatform
             this.panel1.Size = new System.Drawing.Size(216, 636);
             this.panel1.TabIndex = 11;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(44, 456);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(141, 69);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Create Account";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
@@ -81,6 +94,7 @@ namespace VideoEditingPlatform
             this.button6.Size = new System.Drawing.Size(66, 59);
             this.button6.TabIndex = 14;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label2
             // 
@@ -105,6 +119,7 @@ namespace VideoEditingPlatform
             this.button4.TabIndex = 8;
             this.button4.Text = "Notif";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -117,6 +132,7 @@ namespace VideoEditingPlatform
             this.button3.TabIndex = 7;
             this.button3.Text = "Videos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -129,6 +145,7 @@ namespace VideoEditingPlatform
             this.button2.TabIndex = 6;
             this.button2.Text = "Clients";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -151,19 +168,6 @@ namespace VideoEditingPlatform
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(4)))), ((int)(((byte)(110)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(44, 456);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 69);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Create Account";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // HomeA
             // 

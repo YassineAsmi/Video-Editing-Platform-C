@@ -48,6 +48,27 @@ namespace VideoEditingPlatform
         {
 
         }
+        public int getIdUser(string nom)
+        {
+            string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
+            var con = new MySqlConnection(cs);
+            con.Open();
+            string stm = "select id from users WHERE username=@Name ";
+            var cmd = new MySqlCommand(stm, con);
+            cmd.Parameters.AddWithValue("@Name", nom);
+            var reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                int idUser = reader.GetInt32("id");
+
+                return idUser;
+            }
+            else
+            {
+                return 0;
+            }
+                
+        }
         public void dbcheck()
         {
             string cs = @"server=localhost;userid=root;password=;database=videoeditingplatform";
@@ -56,15 +77,21 @@ namespace VideoEditingPlatform
             {
                
                 con.Open();
-                string stm = "select username,password,privieliges from users WHERE username =@Name AND password =@Password and privieliges=1 or privieliges=0 ";
+                string stm = "select id,username,password,privieliges,delay from users WHERE username =@Name AND password =@Password; ";
                 var cmd = new MySqlCommand(stm, con);
-
                 cmd.Parameters.AddWithValue("@Name", userLogin.Text);
                 cmd.Parameters.AddWithValue("@Password", passLogin.Text);
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    Int32 idUser = reader.GetInt32("id");
+                    String username = reader.GetString("username");
+                    Int32 delay = reader.GetInt32("delay");
                     Boolean priv = reader.GetBoolean("privieliges");
+                    Users.idUser = idUser;
+                    Users.username = username;
+                    Users.delay = delay;
+                    Users.priv = priv;
                     if (priv == false)
                     {
                         HomeT homeT = new HomeT();
@@ -77,14 +104,12 @@ namespace VideoEditingPlatform
                         HomeA homea = new HomeA();
                         this.Hide();
                         homea.Show();
-                        
-                        Console.WriteLine("chihez lel tech");
                     }
 
                 }
                else
                 {
-                    Console.WriteLine("unknow info");
+                    MessageBox.Show("Authentication failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

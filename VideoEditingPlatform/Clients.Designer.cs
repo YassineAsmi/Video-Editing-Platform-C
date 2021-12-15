@@ -44,16 +44,16 @@ namespace VideoEditingPlatform
             this.button1 = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.TextBox();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.gradientColor1 = new VideoEditingPlatform.GradientColor();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.gradientColor1 = new VideoEditingPlatform.GradientColor();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
             this.gradientColor1.SuspendLayout();
@@ -92,6 +92,7 @@ namespace VideoEditingPlatform
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -110,6 +111,7 @@ namespace VideoEditingPlatform
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -181,42 +183,6 @@ namespace VideoEditingPlatform
             this.dataGridViewClients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClients_CellClick);
             this.dataGridViewClients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Gainsboro;
-            this.button7.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.add_48px;
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Gainsboro;
-            this.button6.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.search_64px;
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // gradientColor1
-            // 
-            this.gradientColor1.Angle = 0F;
-            this.gradientColor1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.gradientColor1.Controls.Add(this.label1);
-            this.gradientColor1.LeftColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            resources.ApplyResources(this.gradientColor1, "gradientColor1");
-            this.gradientColor1.Name = "gradientColor1";
-            this.gradientColor1.RightColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.gradientColor1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -278,6 +244,42 @@ namespace VideoEditingPlatform
             this.Column6.ReadOnly = true;
             this.Column6.Text = "Delete";
             this.Column6.UseColumnTextForButtonValue = true;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Gainsboro;
+            this.button7.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.add_48px;
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Gainsboro;
+            this.button6.BackgroundImage = global::VideoEditingPlatform.Properties.Resources.search_64px;
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // gradientColor1
+            // 
+            this.gradientColor1.Angle = 0F;
+            this.gradientColor1.BottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gradientColor1.Controls.Add(this.label1);
+            this.gradientColor1.LeftColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            resources.ApplyResources(this.gradientColor1, "gradientColor1");
+            this.gradientColor1.Name = "gradientColor1";
+            this.gradientColor1.RightColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.gradientColor1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(153)))));
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Clients
             // 

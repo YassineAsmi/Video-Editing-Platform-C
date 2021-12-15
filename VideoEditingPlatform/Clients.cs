@@ -90,18 +90,24 @@ namespace VideoEditingPlatform
         }
         private void Clients_Shown(object sender, EventArgs e)
         {
+
             Display();
+            
         
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Clients clients = new Clients();
+            this.Hide(); ;
+            clients.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            HomeT homeT = new HomeT();
+            this.Hide();
+            homeT.Show();
         }
 
         private void v_TextChanged(object sender, EventArgs e)
@@ -134,6 +140,23 @@ namespace VideoEditingPlatform
                 
                 return;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Videos videos = new Videos();
+            this.Hide();
+            videos.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+            Users.idUser = 0;
+            Users.username = "";
+            Users.delay = 0;
         }
     }
 }

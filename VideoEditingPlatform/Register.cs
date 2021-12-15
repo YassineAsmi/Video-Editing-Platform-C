@@ -58,25 +58,14 @@ namespace VideoEditingPlatform
                 cmd2.Parameters.AddWithValue("@Password", txtPassword.Text);
                 cmd2.ExecuteNonQuery();
                 con2.Close();
-                
-                PageRedirect2();
+
+                HomeT homeT = new HomeT();
+                this.Hide();
+                homeT.Show();
 
                 MessageBox.Show("Your Account has been Successfully Created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
          
-        }
-        public void PageRedirect2()
-        {
-            HomeT homeT = new HomeT();
-            if (homeT == null)
-            {
-                homeT.Parent = this;
-            }
-            else
-            {
-                homeT.Show();
-                this.Hide();
-            }
         }
 
         private void Register_Load(object sender, EventArgs e)
@@ -86,9 +75,19 @@ namespace VideoEditingPlatform
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomeA homea = new HomeA();
-            this.Hide();
-            homea.Show();
+            if (Users.priv)
+            {
+                HomeA homea = new HomeA();
+                this.Hide();
+                homea.Show();
+            }
+            else
+            {
+                HomeT homeT = new HomeT();
+                this.Hide();
+                homeT.Show();
+
+            }
         }
     }
 
